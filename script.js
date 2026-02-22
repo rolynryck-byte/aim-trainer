@@ -10,15 +10,17 @@ const placar = document.getElementById("placar");
 const trackbtn = document.getElementById("track");
 const rodapé = document.getElementById("footer-jogo");
 
-let contatointerval, errointerval;
+let contatointerval, trackinterval, errointerval;
 let acertos = 0;
 let erros = 0;
 let velocidade;
+let modoAtual = ""; // Variável que salva se você está no Flick ou Track
 
 // --- FUNÇÕES DE AUXÍLIO ---
 
 function limparIntervalos() {
   clearInterval(contatointerval);
+  clearInterval(trackinterval);
   clearInterval(errointerval);
 }
 
@@ -26,7 +28,6 @@ function finalizarjogo() {
   limparIntervalos();
   perda.style.display = "flex";
   jogadnv.style.display = "flex";
-  resetar.style.display = "flex";
   campo.innerHTML = "";
   campo.style.display = "none";
 }
@@ -38,10 +39,49 @@ function resetarPlacar() {
   document.getElementById("contador-erros").innerText = 0;
 }
 
+// --- MODO TRACKING ---
+
+function iniciartrack() {
+  campo.innerHTML = "";
+  resetarPlacar();
+  const alvo = document.createElement("div");
+  alvo.classList.add("alvo");
+  campo.appendChild(alvo);
+
+  // Movimento do alvo
+  trackinterval = setInterval(() => {
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 100);
+    alvo.style.left = x + "px";
+    alvo.style.top = y + "px";
+  }, 1500);
+
+  // Ganhar pontos ao entrar com o mouse
+  alvo.addEventListener("mouseenter", function () {
+    clearInterval(errointerval);
+    contatointerval = setInterval(() => {
+      acertos++;
+      document.getElementById("contador-acertos").innerText = acertos;
+    }, 100);
+  });
+
+  // Perder pontos (erros) ao sair com o mouse
+  alvo.addEventListener("mouseleave", function () {
+    clearInterval(contatointerval);
+    errointerval = setInterval(() => {
+      erros++;
+      document.getElementById("contador-erros").innerText = erros;
+      if (erros >= 100) {
+        finalizarjogo();
+      }
+    }, 100);
+  });
+}
+
 // --- MODO FLICK ---
 
 function gerarAlvo() {
-  if (erros >= 20) {
+  if (erros >= 10) {
     finalizarjogo();
     return;
   }
@@ -82,6 +122,18 @@ botao1.addEventListener("click", function () {
   teladif.style.display = "flex";
 });
 
+// Botão Tracking no Menu
+trackbtn.addEventListener("click", function () {
+  modoAtual = "track";
+  window.alert("Este Modo de Jogo Tem Tolerância de Erro de 100");
+  modos.style.display = "none";
+  campo.style.display = "flex";
+  placar.style.display = "flex";
+  rodapé.style.display = "none";
+  resetar.style.display = "flex";
+  iniciartrack();
+});
+
 // Clique na parede (Só conta erro se for Modo Flick)
 campo.addEventListener("click", function (evento) {
   if (
@@ -91,7 +143,7 @@ campo.addEventListener("click", function (evento) {
   ) {
     erros++;
     document.getElementById("contador-erros").innerText = erros;
-    if (erros >= 20) finalizarjogo();
+    if (erros >= 10) finalizarjogo();
   }
 });
 
@@ -102,6 +154,7 @@ dificuldade.forEach(function (botao) {
     teladif.style.display = "none";
     campo.style.display = "block";
     placar.style.display = "flex";
+    resetar.style.display = "flex";
     resetarPlacar();
     gerarAlvo();
   });
@@ -130,5 +183,7 @@ jogadnv.addEventListener("click", function () {
 
   if (modoAtual === "flick") {
     gerarAlvo();
+  } else if (modoAtual === "track") {
+    iniciartrack();
   }
 });
