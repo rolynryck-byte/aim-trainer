@@ -9,6 +9,8 @@ const jogadnv = document.getElementById("jogar-novamente");
 const placar = document.getElementById("placar");
 const trackbtn = document.getElementById("track");
 const rodapé = document.getElementById("footer-jogo");
+const computador = document.getElementById("PC");
+const painelver = document.getElementById("pc");
 
 let contatointerval, trackinterval, errointerval;
 let acertos = 0;
@@ -38,6 +40,12 @@ function resetarPlacar() {
   document.getElementById("contador-acertos").innerText = 0;
   document.getElementById("contador-erros").innerText = 0;
 }
+
+// --- VERIFICAÇÃO DE PLATAFORMA ---
+
+computador.addEventListener("click", function () {
+  painelver.style.display = "none";
+});
 
 // --- MODO TRACKING ---
 
