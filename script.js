@@ -26,6 +26,7 @@ function finalizarjogo() {
   limparIntervalos();
   perda.style.display = "flex";
   jogadnv.style.display = "flex";
+  resetar.style.display = "flex";
   campo.innerHTML = "";
   campo.style.display = "none";
 }
@@ -40,7 +41,7 @@ function resetarPlacar() {
 // --- MODO FLICK ---
 
 function gerarAlvo() {
-  if (erros >= 10) {
+  if (erros >= 20) {
     finalizarjogo();
     return;
   }
@@ -101,7 +102,6 @@ dificuldade.forEach(function (botao) {
     teladif.style.display = "none";
     campo.style.display = "block";
     placar.style.display = "flex";
-    resetar.style.display = "flex";
     resetarPlacar();
     gerarAlvo();
   });
