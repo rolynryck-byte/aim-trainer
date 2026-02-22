@@ -444,3 +444,8 @@ body {
 .links-sociais {
   margin-top: 10px;
 }
+
+.celular {
+  text-decoration: none;
+  color: aliceblue;
+}
