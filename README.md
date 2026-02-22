@@ -8,10 +8,10 @@ A high-performance Aim Trainer built with **Pure JavaScript**, featuring a moder
 
 
 ## 🚀 Live Demo
-Play the game here: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
+Play the PC game here: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
 
 
-Mobile Game: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
+Mobile Game: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/Aim-Trainer-Mobile/)
 ## 🕹️ Game Modes
 
 ### 1. Flick Mode (Precision)
@@ -22,7 +22,7 @@ Test your snap-to-target speed. Targets appear at random locations and disappear
 ### 2. Tracking Mode (Consistency)
 Train your ability to follow a moving target. The target moves continuously across the screen.
 * **Mechanics:** Earn points by keeping your cursor over the moving target.
-* **Challenge:** High tolerance mode (1,000 misses) for long-duration training.
+* **Challenge:** High tolerance mode (100 misses) for long-duration training.
 
 ## 🛠️ Tech Stack
 
