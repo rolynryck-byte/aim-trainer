@@ -91,7 +91,7 @@ campo.addEventListener("click", function (evento) {
   ) {
     erros++;
     document.getElementById("contador-erros").innerText = erros;
-    if (erros >= 10) finalizarjogo();
+    if (erros >= 20) finalizarjogo();
   }
 });
 
