@@ -1,27 +1,43 @@
-1. Flick Mode (Alvos Parados)
-Treine sua precisão e tempo de reação. Os alvos surgem em posições aleatórias e você deve atingi-los antes que desapareçam.
+# 🎯 Aim Trainer Pro - Glitch Edition
 
-Dificuldades: Fácil, Médio e Hardcore (cada uma com velocidades e efeitos de vibração visuais exclusivos).
+![License](https://img.shields.io/github/license/rolynryck-byte/aim-trainer?color=ff0050)
+![Repo Size](https://img.shields.io/github/repo-size/rolynryck-byte/aim-trainer?color=00f2ea)
 
-Penalidade: Errar o clique ou demorar demais aumenta o contador de erros.
+A high-performance Aim Trainer built with **Pure JavaScript**, featuring a modern Glitch/Cyberpunk UI. This project focuses on precision, reaction time, and smooth CSS animations.
 
-2. Tracking Mode (Acompanhar)
-Treine sua consistência de rastreio. O alvo se move continuamente pela tela.
 
-Mecânica: Você ganha pontos enquanto mantiver o mouse sobre o alvo. Se o mouse sair, os erros começam a subir rapidamente.
 
-Tolerância: Modo de alta pontuação com limite de 1000 erros.
+## 🚀 Live Demo
+Play the game here: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
 
-🛠️ Tecnologias Utilizadas
-HTML5: Estrutura semântica do jogo.
+## 🕹️ Game Modes
 
-CSS3: Layout adaptativo e animações avançadas de Glitch/3D (Cyan & Magenta) usando pseudo-elementos (::before, ::after) e @keyframes.
+### 1. Flick Mode (Precision)
+Test your snap-to-target speed. Targets appear at random locations and disappear after a short duration.
+* **Difficulties:** Easy, Medium, and Hardcore (each with unique visual vibration intensities).
+* **Game Over:** Reaching 10 misses ends the session.
 
-JavaScript (ES6+): Lógica principal, controle de setInterval, gerenciamento de estados de jogo e detecção de colisões de mouse.
+### 2. Tracking Mode (Consistency)
+Train your ability to follow a moving target. The target moves continuously across the screen.
+* **Mechanics:** Earn points by keeping your cursor over the moving target.
+* **Challenge:** High tolerance mode (1,000 misses) for long-duration training.
 
-🎨 Destaques do Código
-Efeito Glitch Inteligente: Os botões possuem um efeito visual que só é ativado no hover, otimizando a performance visual e a experiência do usuário.
+## 🛠️ Tech Stack
 
-Gerenciamento de Memória: O jogo limpa automaticamente todos os intervalos (clearInterval) ao trocar de modo ou dar Game Over, evitando bugs de processamento.
+* **HTML5:** Semantic structure.
+* **CSS3:** Advanced animations using `@keyframes`, pseudo-elements (`::before`, `::after`), and **Flexbox** for responsive centering.
+* **JavaScript (ES6+):** DOM manipulation, interval management (`setInterval`), and game state logic.
 
-Vibrações Dinâmicas: Cada nível de dificuldade possui uma assinatura de vibração diferente calculada via CSS.
+
+
+## ✨ Key Features
+
+* **Dynamic Vibrations:** Each difficulty level has a specific "vibration" signature that activates only on hover.
+* **Fully Responsive:** Centering logic uses `transform: translate(-50%, -50%)`, ensuring the UI looks perfect on any screen size.
+* **Glitch UI:** A sleek Cyberpunk aesthetic with Cyan and Magenta layers.
+
+## 🔧 How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rolynryck-byte/aim-trainer.git
