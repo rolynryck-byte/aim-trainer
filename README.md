@@ -9,6 +9,8 @@ A high-performance Aim Trainer built with **Pure JavaScript**, featuring a moder
 
 ## 🚀 Live Demo
 Play the game here: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
+
+
 Mobile Game: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
 ## 🕹️ Game Modes
 
