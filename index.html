@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIM TRAINER</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <div class="modos" id="modos">
+      <h1 class="modo">Qual Modo Deseja Jogar?</h1>
+      <section id="tela-modo" class="tela-modo">
+        <div class="bloco-modo">
+          <button class="flick" id="flick">Alvos Parados</button>
+          <button class="track" id="track">Acompanhar</button>
+        </div>
+      </section>
+    </div>
+    <div id="tela-dificuldade" class="modos" style="display: none">
+      <h1 class="modo">Selecione a Dificuldade</h1>
+      <div class="opcoes-diff">
+        <button class="modo diff-btn" id="diff-btn" data-speed="800">
+          Fácil
+        </button>
+        <button class="modo diff-btn" id="diff-btn" data-speed="700">
+          Médio
+        </button>
+        <button class="modo diff-btn" id="diff-btn" data-speed="550">
+          Hardcore
+        </button>
+      </div>
+    </div>
+    <div class="contagem">
+      <div id="placar">
+        <p>Acertos: <span id="contador-acertos">0</span></p>
+        <p>Erros: <span id="contador-erros">0</span></p>
+      </div>
+      <div id="interface">
+        <button id="reset" class="modo">Trocar Modo</button>
+      </div>
+      <div id="campo-treino"></div>
+    </div>
+    <div>
+      <div class="GAME-OVER" id="GAME-OVER">GAME OVER</div>
+      <button class="modo jogar-novamente" id="jogar-novamente">
+        Jogar Novamente
+      </button>
+    </div>
+    <footer class="footer-jogo" id="footer-jogo">
+      <p>
+        Desenvolvido por <span>Chroniseth</span> | Inspiração Glitch:
+        <a href="#" target="_blank">Autor Original</a>
+      </p>
+      <div class="links-sociais">
+        <a href="https://github.com/rolynryck-byte">GitHub</a>
+        <a href="https://www.linkedin.com/in/gabriel-phelipe-638aa13b2/"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
