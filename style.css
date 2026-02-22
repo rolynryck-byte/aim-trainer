@@ -150,7 +150,7 @@ body {
 .flick,
 .track {
   cursor: pointer;
-  width: 90vh;
+  width: 200px;
   padding: 50px;
   transition: all 0.3s ease-in;
 }
@@ -170,7 +170,6 @@ body {
 }
 
 .diff-btn {
-  width: 90vh;
   transition: all 0.3s ease-in-out;
 }
 
@@ -236,7 +235,7 @@ body {
 .GAME-OVER {
   position: absolute;
   /* Posiciona o ponto inicial exatamente no meio da tela */
-  top: 30%;
+  top: 40%;
   left: 50%;
   /* Move o elemento para trás em 50% do seu próprio tamanho, centralizando-o */
   transform: translate(-50%, -50%);
@@ -245,13 +244,13 @@ body {
   text-align: center;
   z-index: 1000;
   width: auto; /* Deixe o tamanho fluir com o texto ou use um fixo */
-  padding: 5px;
+  padding: 20px;
   cursor: default;
   display: none; /* O JS mudará para 'block' ou 'flex' */
   user-select: none;
   color: #ff0050;
   outline: 2px solid #ff0050;
-  outline-offset: 30px;
+  outline-offset: 50px;
   border-radius: 12px;
 
   /* Remova as margens e os 'right' antigos! */
@@ -260,7 +259,7 @@ body {
 .jogar-novamente {
   position: absolute;
   /* Fica um pouco abaixo do Game Over */
-  top: 80%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 
