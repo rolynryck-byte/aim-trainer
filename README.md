@@ -1,45 +1,49 @@
-# 🎯 Aim Trainer Pro - Glitch Edition
+# 🎯 Aim Trainer Pro - Desktop Edition
 
-![License](https://img.shields.io/github/license/rolynryck-byte/aim-trainer?color=ff0050)
-![Repo Size](https://img.shields.io/github/repo-size/rolynryck-byte/aim-trainer?color=00f2ea)
+![License](https://img.shields.io/github/license/rolynryck-byte/aim-trainer?color=00f2ea)
+![Repo Size](https://img.shields.io/github/repo-size/rolynryck-byte/aim-trainer?color=ff0050)
 
-A high-performance Aim Trainer built with **Pure JavaScript**, featuring a modern Glitch/Cyberpunk UI. This project focuses on precision, reaction time, and smooth CSS animations.
-
-
+The ultimate training ground for PC gamers. This version is a high-performance Aim Trainer built with **Pure JavaScript**, featuring advanced tracking mechanics and a signature Cyberpunk "Glitch" aesthetic.
 
 ## 🚀 Live Demo
-Play the PC game here: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
+> 💡 **Experience the full Glitch UI and smooth 60fps tracking directly in your browser:**
 
+Play the PC version here: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/aim-trainer/)
 
-Mobile Game: [https://rolynryck-byte.github.io/aim-trainer/](https://rolynryck-byte.github.io/Aim-Trainer-Mobile/)
-## 🕹️ Game Modes
+*(Using a phone? Check out the [Mobile Edition](https://rolynryck-byte.github.io/Aim-Trainer-Mobile/))*
 
-### 1. Flick Mode (Precision)
-Test your snap-to-target speed. Targets appear at random locations and disappear after a short duration.
-* **Difficulties:** Easy, Medium, and Hardcore (each with unique visual vibration intensities).
-* **Game Over:** Reaching 10 misses ends the session.
+## 🕹️ Game Modes (PC Optimized)
 
-### 2. Tracking Mode (Consistency)
-Train your ability to follow a moving target. The target moves continuously across the screen.
-* **Mechanics:** Earn points by keeping your cursor over the moving target.
-* **Challenge:** High tolerance mode (100 misses) for long-duration training.
+### 1. Flick Mode
+Test your snap-to-target reaction time. Perfect for flick-shot training.
+* **Difficulties:** Easy, Medium, and Hardcore.
+* **Visuals:** Dynamic vibration effects on hover.
+
+### 2. Tracking Mode (Desktop Exclusive)
+Train your ability to follow a moving target. The target moves continuously across the screen using smooth `requestAnimationFrame` logic.
+* **Challenge:** High tolerance mode for long-duration consistency training.
+
+## 🎨 Creative & Technical Profile
+
+As a **Concept Artist** and **Web Designer**, I developed this project to explore the intersection of gaming performance and visual storytelling:
+* **Visual Identity:** Cyberpunk theme using high-contrast Magenta (#ff0050) and Cyan (#00f2ea).
+* **Glitch UX:** Custom CSS `@keyframes` and pseudo-elements to create an "unstable digital" atmosphere.
+* **Core Dev:** Built with optimized Vanilla JavaScript to ensure zero input lag.
 
 ## 🛠️ Tech Stack
 
-* **HTML5:** Semantic structure.
-* **CSS3:** Advanced animations using `@keyframes`, pseudo-elements (`::before`, `::after`), and **Flexbox** for responsive centering.
-* **JavaScript (ES6+):** DOM manipulation, interval management (`setInterval`), and game state logic.
-
-
+* **HTML5:** Semantic structure for game containers.
+* **CSS3:** Advanced glitch animations, neon glows, and responsive centering.
+* **JavaScript (ES6+):** Physics-based movement for the tracking mode, state management, and event listeners.
 
 ## ✨ Key Features
 
-* **Dynamic Vibrations:** Each difficulty level has a specific "vibration" signature that activates only on hover.
-* **Fully Responsive:** Centering logic uses `transform: translate(-50%, -50%)`, ensuring the UI looks perfect on any screen size.
-* **Glitch UI:** A sleek Cyberpunk aesthetic with Cyan and Magenta layers.
+* **Precision Hitboxes:** Targets designed for pixel-perfect mouse accuracy.
+* **Dynamic Feedback:** Real-time score and miss tracking.
+* **Immersive Aesthetic:** A sleek UI designed from scratch to reflect my artistic vision.
 
-## 🔧 How to Run
+## 🔧 Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rolynryck-byte/aim-trainer.git
+   git clone [https://github.com/rolynryck-byte/aim-trainer.git](https://github.com/rolynryck-byte/aim-trainer.git)
